@@ -2,7 +2,7 @@ package br.com.alura.model;
 
 public class Musica extends Audio{
 
-    private String artista, album;
+    private String artista, album, genero;
 
     public String getArtista() {
         return artista;
@@ -18,5 +18,13 @@ public class Musica extends Audio{
 
     public void setAlbum(String album) {
         this.album = album;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 }
