@@ -2,16 +2,15 @@ package br.com.alura.model;
 
 public class Audio {
 
-    private String tipo, titulo, genero, plataforma;
-    private int duracaoMinutos, totalCurtidas, totalViews, anoLancamento;
+    private String tipo, titulo;
+    private int duracaoMinutos, totalCurtidas, totalViews, anoLancamento, classificacao;
 
-    public void epecificacoes(Audio audio){
-        System.out.println("Tipo: " + tipo);
-        System.out.println("Titulo: " + titulo);
-        System.out.println("Genero: " + genero);
-        System.out.println("Ano de lançamento: " + anoLancamento);
-        System.out.println("Duração " + duracaoMinutos + " minutos");
-        System.out.println("Visualizações: " + totalViews);
+    public void curtiu(){
+        totalCurtidas++;
+    }
+
+    public void reproduziu(){
+        totalViews++;
     }
 
     public int somaCurtidas(int curtida){
@@ -41,21 +40,6 @@ public class Audio {
         this.titulo = titulo;
     }
 
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public String getPlataforma() {
-        return plataforma;
-    }
-
-    public void setPlataforma(String plataforma) {
-        this.plataforma = plataforma;
-    }
 
     public int getDuracaoMinutos() {
         return duracaoMinutos;
@@ -69,16 +53,8 @@ public class Audio {
         return totalCurtidas;
     }
 
-    public void setTotalCurtidas(int totalCurtidas) {
-        this.totalCurtidas = totalCurtidas;
-    }
-
     public int geTtotalViews(){
         return totalViews;
-    }
-
-    public void setTotalViews(int totalViews){
-        this.totalViews = totalViews;
     }
 
     public int getAnoLancamento() {
@@ -88,4 +64,9 @@ public class Audio {
     public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
+
+    public int getClassificacao() {
+        return classificacao;
+    }
+
 }
